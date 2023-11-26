@@ -15,110 +15,51 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 :root {
-    /*
-    --primary: #081b29;
-    --secondary: #00abf0;;
-    --font: #ededed;
-    */
-    --primary: #1d1b26;
-    --secondary: #e34234;
-    --font: #ededed;
+  --primary: #1d1b26;
+  --secondary: #e34234;
+  --font: #ededed;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  @apply box-border m-0 p-0;
+  font-family: "Poppins", sans-serif;
 }
-
 body {
-    background-color: var(--primary);
-    color: var(--font)
+  @apply bg-[color:var(--primary)] text-[color:var(--font)];
 }
-
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+  @apply fixed w-full flex justify-between items-center z-[100] px-[10%] py-5 left-0 top-0;
+  background: transparent;
 }
-
 .logo {
-    font-size: 25px;
-    color: var(--font);
-    text-decoration: none;
-    font-weight: 600;
+  @apply text-[25px] text-[color:var(--font)] no-underline font-semibold;
 }
-
 .navbar a {
-    font-size: 18px;
-    color: var(--font);
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
+  @apply text-lg text-[color:var(--font)] no-underline font-medium ml-[35px];
 }
-
 .navbar a:hover,
 .navbar a.active {
-    color: var(--secondary);
+  @apply text-[color:var(--secondary)];
 }
-
 .home {
-    height: 100vh;
-    /*background: url('home') no-repeat;
-    background-size: cover;
-    background-position: center;*/
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
+  @apply h-screen flex items-center px-[10%] py-0;
 }
-
-.home-content{
-   max-width: 600px;
+.home-content {
+  @apply max-w-[600px];
 }
-
-.home-content h1{
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 1.2;
+.home-content h1 {
+  @apply text-[56px] font-bold leading-[1.2];
 }
-
-.home-content h3{
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--secondary);
+.home-content h3 {
+  @apply text-[32px] font-bold text-[color:var(--secondary)];
 }
-
 .home-content p {
-    font-size: 16px;
-    margin: 20px 0 40px;
+  @apply text-base mt-5 mb-10 mx-0;
 }
-
-.home-content .btn-box{
-    display: flex;
-    justify-content: space-between;
-    width: 345px;
-    height: 50px;
+.home-content .btn-box {
+  @apply flex justify-between w-[345px] h-[50px];
 }
 
 .btn-box a {
@@ -140,12 +81,6 @@ body {
     overflow: hidden;
     transition: .5s;
 }
-/*
-.btn-box a:nth-child(2) {
-    background-color: transparent;
-    color: var(--secondary);
-}
-*/
 .btn-box a:before {
     content: '';
     position: absolute;
@@ -157,7 +92,6 @@ body {
     z-index: -1;
     transition: 0.5s;
 }
-
 .btn-box a:hover {
     color: var(--secondary);
 }
@@ -165,15 +99,26 @@ body {
 .btn-box a:hover::before {
     width: 100%;
 }
-
-.home-icons {
-    position: absolute;
-    bottom: 40px;
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
+/*.btn-box a {
+  @apply relative inline-flex justify-center items-center w-[150px] h-full border-[color:var(--secondary)] text-[19px] text-[color:var(--primary)] no-underline font-semibold tracking-[1px] z-[1] overflow-hidden transition-[0.5s] rounded-lg border-2 border-solid before:content-[''] before:absolute before:w-[0%] before:h-full before:z-[-1] before:transition-[0.5s] before:left-0 before:top-0 hover:text-[color:var(--secondary)] hover:before:w-full;
+  background: var(--secondary);
+  transition: .5s;
 }
 
+.btn-box a:before {
+  background: var(--primary);
+}*/
+.home-icons {
+  @apply absolute w-[170px] flex justify-between bottom-10;
+}
+/*
+.home-icons a {
+  @apply relative inline-flex justify-center items-center w-10 h-10 border-[color:var(--secondary)] text-xl text-[color:var(--secondary)] no-underline z-[1] overflow-hidden transition-[0.5s] rounded-[50%] border-2 border-solid before:content-[''] before:absolute before:w-[0%] before:h-full before:z-[-1] before:transition-[0.5s] before:left-0 before:top-0 hover:text-[color:var(--primary)] hover:before:w-full hover:before:h-full;
+  background: transparent;
+}
+.home-icons a::before {
+  background: var(--secondary);
+}*/
 .home-icons a {
     position: relative;
     display: inline-flex;
@@ -211,17 +156,9 @@ body {
     width: 100%;
     height: 100%;
 }
-
 .image {
-    height: 100vh;
-    /*background: url('home') no-repeat;
-    background-size: cover;
-    background-position: center;*/
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
+  @apply h-screen flex items-center px-[10%] py-0;
 }
-
 .image-content {
-    padding: 0 10%;
+  @apply px-[10%] py-0;
 }
