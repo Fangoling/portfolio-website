@@ -2,7 +2,7 @@
 
 //import type { Metadata } from 'next'
 //import { Poppins } from 'next/font/google'
-import './globals.css'
+import './global.css'
 import { usePathname } from 'next/navigation'
 /*
 const poppins = Poppins({
