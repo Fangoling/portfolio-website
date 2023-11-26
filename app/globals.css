@@ -32,7 +32,8 @@ body {
 }
 */
 body {
-  @apply bg-[color:var(--primary)] text-[color:var(--font)];
+    background-color: var(--primary);
+    color: var(--font)
 }
 
 .header {
