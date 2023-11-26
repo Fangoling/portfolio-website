@@ -26,9 +26,15 @@
   @apply box-border m-0 p-0;
   font-family: "Poppins", sans-serif;
 }
+/*
 body {
   @apply bg-[color:var(--primary)] text-[color:var(--font)];
 }
+*/
+body {
+  @apply bg-[color:var(--primary)] text-[color:var(--font)];
+}
+
 .header {
   @apply fixed w-full flex justify-between items-center z-[100] px-[10%] py-5 left-0 top-0;
   background: transparent;
