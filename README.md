@@ -12,7 +12,6 @@ npm run dev
 - Pages with cat meme
    
 ### Roadmap
-- fixing the colorscheme on the homepage 
 - the about page
 - the services page
 - the portfolio page
