@@ -57,13 +57,13 @@ body {
   @apply max-w-[600px];
 }
 .home-content h1 {
-  @apply text-[56px] font-bold leading-[1.2];
+  @apply text-[56px] font-bold leading-[1.2] text-[color:var(--font)];
 }
 .home-content h3 {
   @apply text-[32px] font-bold text-[color:var(--secondary)];
 }
 .home-content p {
-  @apply text-base mt-5 mb-10 mx-0;
+  @apply text-base mt-5 mb-10 mx-0 text-[color:var(--font)];
 }
 .home-content .btn-box {
   @apply flex justify-between w-[345px] h-[50px];
