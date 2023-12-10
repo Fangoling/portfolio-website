@@ -1,18 +1,20 @@
 ## My portfolio website 
 
-[Visit it here](https://fangxingliu.com)
+Visit it at https://fangxingliu.com
 
-Run the project locally with the following command, the page is then accessible at localhost:5500/
+Run the project locally with the following command
 ```
 npm run dev 
 ```
+The page is then accessible at localhost:3000
 
 ### Feautures
 - Homepage with links to my social media and my contact
-- Pages with cat meme
+- Pages with cat memes
    
 ### Roadmap
-- the about page
-- the services page
-- the portfolio page
-- the contact page
+- home page
+- about page
+- services page
+- portfolio page
+- contact page
