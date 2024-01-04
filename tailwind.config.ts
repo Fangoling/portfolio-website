@@ -8,10 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        sans: ['var(--font-poppins)'],
+        mono: ['var(--font-poppins)']
+      },
       colors: {
-        primary: "#1d1b26",
-        secondary: "#e34234",
-        font: "#ededed"
+        primary: '#1d1b26',
+        secondary: '#e34234',
+        font: '#ededed',
+        customred: '#e34234'
       },
       backgroundImage: {
         

@@ -13,7 +13,7 @@
 }
 body {
     background-color: var(--primary);
-    color: var(--font)
+    color: var(--font);
 }
 .header {
   @apply fixed w-full flex justify-between items-center z-[100] px-[10%] py-5 left-0 top-0 ;
@@ -30,8 +30,9 @@ body {
   @apply text-[color:var(--secondary)];
 }
 .footer {
-  @apply fixed w-full flex bottom-0 items-center z-[100] px-[10%] py-0;
+  @apply fixed w-full bottom-0 items-center z-[10000] px-[10%] py-0;
   background-color: var(--primary);
+  color: var(--primary)
 }
 .home-content {
   @apply max-w-[600px];
@@ -135,5 +136,5 @@ body {
 }
 
 .children-container {
-  @apply pt-[12%] px-[10%] flex flex-col h-full z-[-1]
+  @apply pt-[12%] px-[10%] z-[-1];
 }

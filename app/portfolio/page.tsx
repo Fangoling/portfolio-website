@@ -12,10 +12,10 @@ type PortfolioItem = {
 const PortfolioCard: React.FC<{ item: PortfolioItem }> = ({ item }) => {
   return (
     <div style={{ border: '1px solid #ccc', padding: '20px', margin: '10px' }}>
-      <h3>{item.title}</h3>
+      <h3 className="text-2xl">{item.title}</h3>
       <Image src={item.imageUrl} alt={item.title} width={500} height={300} />
       <p>{item.description}</p>
-      <Link href={item.link}>View Project</Link>
+      <Link href={item.link} className='hover:text-red-500'>View Project</Link>
     </div>
   )
 }
@@ -36,7 +36,7 @@ const portfolioItems: PortfolioItem[] = [
 export default function Portfolio() {
   return (
     <div>
-      <h1>My Portfolio</h1>
+      <h1 className='text-6xl'>My Portfolio</h1>
       <section>
         {portfolioItems.map((item, index) => (
           <PortfolioCard key={index} item={item} />

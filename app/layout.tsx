@@ -9,6 +9,7 @@ import { Poppins } from 'next/font/google'
 const poppins = Poppins({
   weight: ['300','400','500','600','700','800','900'],
   subsets: ['latin'],
+  variable: '--font-poppins'
 })
 /*
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default function RootLayout({
   const pathname = usePathname()
 
   return (
-    <html>
+    <html lang="en" className={`${poppins.variable}`}>
 
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,24 +35,23 @@ export default function RootLayout({
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
       </head>
 
-      <header className="header" style={{ fontFamily: "Poppings, sans-serif"}}>
+      <header className="header">
           <a href="/" className="logo">Fangxing.</a>
 
           <nav className="navbar">
               <a href="/" className={pathname === '/' ? 'active' : ''}>Home</a>
               <a href="/about" className={pathname === '/about' ? 'active' : ''}>About</a>
-              <a href="/services" className={pathname === '/services' ? 'active' : ''}>Services</a>
               <a href="/portfolio" className={pathname === '/portfolio' ? 'active' : ''}>Portfolio</a>
+              <a href="/services" className={pathname === '/services' ? 'active' : ''}>Services</a>
               <a href="/contact" className={pathname === '/contact' ? 'active' : ''}>Contact</a>
           </nav>
       </header>
 
-      <main className={poppins.className}>
+      <main>
         <div className="children-container">
           {children}
         </div>
       </main>
-
       <footer className="footer">
           <div className="footer-icons">
               <a href="https://github.com/Fangoling"><i className='bx bxl-github'></i></a>
