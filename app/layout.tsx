@@ -26,35 +26,39 @@ export default function RootLayout({
 
   return (
     <html>
+
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
         <title>Fangxing Liu&apos;s website</title>
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
       </head>
+
+      <header className="header" style={{ fontFamily: "Poppings, sans-serif"}}>
+          <a href="/" className="logo">Fangxing.</a>
+
+          <nav className="navbar">
+              <a href="/" className={pathname === '/' ? 'active' : ''}>Home</a>
+              <a href="/about" className={pathname === '/about' ? 'active' : ''}>About</a>
+              <a href="/services" className={pathname === '/services' ? 'active' : ''}>Services</a>
+              <a href="/portfolio" className={pathname === '/portfolio' ? 'active' : ''}>Portfolio</a>
+              <a href="/contact" className={pathname === '/contact' ? 'active' : ''}>Contact</a>
+          </nav>
+      </header>
+
       <main className={poppins.className}>
-        <header className="header">
-            <a href="/" className="logo">Fangxing.</a>
-
-            <nav className="navbar">
-                <a href="/" className={pathname === '/' ? 'active' : ''}>Home</a>
-                <a href="/about" className={pathname === '/about' ? 'active' : ''}>About</a>
-                <a href="/services" className={pathname === '/services' ? 'active' : ''}>Services</a>
-                <a href="/portfolio" className={pathname === '/portfolio' ? 'active' : ''}>Portfolio</a>
-                <a href="/contact" className={pathname === '/contact' ? 'active' : ''}>Contact</a>
-            </nav>
-        </header>
-
-        <section className="home">
-            {children}
-            <div className="home-icons">
-                <a href="https://github.com/Fangoling"><i className='bx bxl-github'></i></a>
-                <a href="https://discordapp.com/users/327905667778347019"><i className='bx bxl-discord'></i></a>
-                <a href="https://www.linkedin.com/in/fangxingliu"><i className='bx bxl-linkedin-square'></i></a>
-            </div>
-        </section>
-
+        <div className="children-container">
+          {children}
+        </div>
       </main>
+
+      <footer className="footer">
+          <div className="footer-icons">
+              <a href="https://github.com/Fangoling"><i className='bx bxl-github'></i></a>
+              <a href="https://discordapp.com/users/327905667778347019"><i className='bx bxl-discord'></i></a>
+              <a href="https://www.linkedin.com/in/fangxingliu"><i className='bx bxl-linkedin-square'></i></a>
+          </div>
+      </footer>
 
     </html>
   )

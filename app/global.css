@@ -1,21 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/**
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 :root {
   --primary: #1d1b26;
@@ -25,19 +11,13 @@
 * {
   @apply box-border m-0 p-0;
 }
-/*
-body {
-  @apply bg-[color:var(--primary)] text-[color:var(--font)];
-}
-*/
 body {
     background-color: var(--primary);
     color: var(--font)
 }
-
 .header {
-  @apply fixed w-full flex justify-between items-center z-[100] px-[10%] py-5 left-0 top-0;
-  background: transparent;
+  @apply fixed w-full flex justify-between items-center z-[100] px-[10%] py-5 left-0 top-0 ;
+  background-color: var(--primary);
 }
 .logo {
   @apply text-[25px] text-[color:var(--font)] no-underline font-semibold;
@@ -49,8 +29,9 @@ body {
 .navbar a.active {
   @apply text-[color:var(--secondary)];
 }
-.home {
-  @apply h-screen flex items-center px-[10%] py-0;
+.footer {
+  @apply fixed w-full flex bottom-0 items-center z-[100] px-[10%] py-0;
+  background-color: var(--primary);
 }
 .home-content {
   @apply max-w-[600px];
@@ -105,27 +86,10 @@ body {
 .btn-box a:hover::before {
     width: 100%;
 }
-/*.btn-box a {
-  @apply relative inline-flex justify-center items-center w-[150px] h-full border-[color:var(--secondary)] text-[19px] text-[color:var(--primary)] no-underline font-semibold tracking-[1px] z-[1] overflow-hidden transition-[0.5s] rounded-lg border-2 border-solid before:content-[''] before:absolute before:w-[0%] before:h-full before:z-[-1] before:transition-[0.5s] before:left-0 before:top-0 hover:text-[color:var(--secondary)] hover:before:w-full;
-  background: var(--secondary);
-  transition: .5s;
-}
-
-.btn-box a:before {
-  background: var(--primary);
-}*/
-.home-icons {
+.footer-icons {
   @apply absolute w-[170px] flex justify-between bottom-10;
 }
-/*
-.home-icons a {
-  @apply relative inline-flex justify-center items-center w-10 h-10 border-[color:var(--secondary)] text-xl text-[color:var(--secondary)] no-underline z-[1] overflow-hidden transition-[0.5s] rounded-[50%] border-2 border-solid before:content-[''] before:absolute before:w-[0%] before:h-full before:z-[-1] before:transition-[0.5s] before:left-0 before:top-0 hover:text-[color:var(--primary)] hover:before:w-full hover:before:h-full;
-  background: transparent;
-}
-.home-icons a::before {
-  background: var(--secondary);
-}*/
-.home-icons a {
+.footer-icons a {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -143,7 +107,7 @@ body {
     transition: .5s;
 }
 
-.home-icons a::before {
+.footer-icons a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -154,17 +118,22 @@ body {
     z-index: -1;
     transition: .5s;
 }
-.home-icons a:hover {
+.footer-icons a:hover {
     color: var(--primary);
 }
 
-.home-icons a:hover::before {
+.footer-icons a:hover::before {
     width: 100%;
     height: 100%;
 }
+
 .image {
   @apply h-screen flex items-center px-[10%] py-0;
 }
 .image-content {
   @apply px-[10%] py-0;
+}
+
+.children-container {
+  @apply pt-[12%] px-[10%] flex flex-col h-full z-[-1]
 }
