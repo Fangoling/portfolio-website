@@ -16,8 +16,10 @@ body {
     color: var(--font);
 }
 .header {
-  @apply fixed w-full flex justify-between items-center z-[100] px-[10%] py-5 left-0 top-0 ;
+  @apply w-full flex justify-between items-center z-[100] px-[10%] py-5 left-0 top-0 ;
   background-color: var(--primary);
+  display: flex;
+  flex-wrap: wrap;
 }
 .logo {
   @apply text-[25px] text-[color:var(--font)] no-underline font-semibold;
@@ -136,5 +138,5 @@ body {
 }
 
 .children-container {
-  @apply pt-[12%] px-[10%] z-[-1];
+  @apply pt-[20vh] px-[10%] z-[-1];
 }
