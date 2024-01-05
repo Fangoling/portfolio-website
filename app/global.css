@@ -78,6 +78,7 @@ body {
     overflow: hidden;
     transition: .5s;
 }
+
 .btn-box a:before {
     content: '';
     position: absolute;
