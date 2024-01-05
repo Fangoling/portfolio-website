@@ -11,18 +11,27 @@
 * {
   @apply box-border m-0 p-0;
 }
+
+html {
+  height: 100%;
+}
+
 body {
     background-color: var(--primary);
     color: var(--font);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .header {
   @apply w-full flex justify-between items-center z-[100] px-[10%] py-5 left-0 top-0 ;
-  background-color: var(--primary);
-  display: flex;
-  flex-wrap: wrap;
 }
 .logo {
   @apply text-[25px] text-[color:var(--font)] no-underline font-semibold;
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap
 }
 .navbar a {
   @apply text-lg text-[color:var(--font)] no-underline font-medium ml-[35px];
@@ -32,9 +41,7 @@ body {
   @apply text-[color:var(--secondary)];
 }
 .footer {
-  @apply fixed w-full bottom-0 items-center z-[10000] px-[10%] py-0;
-  background-color: var(--primary);
-  color: var(--primary)
+  @apply relative w-full bottom-0 items-center z-[100] px-[10%] py-0 mt-auto;
 }
 .home-content {
   @apply max-w-[600px];
@@ -138,5 +145,5 @@ body {
 }
 
 .children-container {
-  @apply pt-[15vh] px-[10%] z-[-1];
+  @apply pt-[10vh] pb-[15vh] px-[10%] z-[-1];
 }

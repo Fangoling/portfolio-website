@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import { Poppins } from 'next/font/google'
 
 const poppins = Poppins({
-  weight: ['300','400','500','600','700','800','900'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   variable: '--font-poppins'
 })
@@ -34,32 +34,34 @@ export default function RootLayout({
         <title>Fangxing Liu&apos;s website</title>
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
       </head>
-
-      <header className="header">
+      <body>
+        <header className="header">
           <a href="/" className="logo">Fangxing.</a>
 
           <nav className="navbar">
-              <a href="/" className={pathname === '/' ? 'active' : ''}>Home</a>
-              <a href="/about" className={pathname === '/about' ? 'active' : ''}>About</a>
-              <a href="/portfolio" className={pathname === '/portfolio' ? 'active' : ''}>Portfolio</a>
-              <a href="/services" className={pathname === '/services' ? 'active' : ''}>Services</a>
-              <a href="/contact" className={pathname === '/contact' ? 'active' : ''}>Contact</a>
+            <a href="/" className={pathname === '/' ? 'active' : ''}>Home</a>
+            <a href="/about" className={pathname === '/about' ? 'active' : ''}>About</a>
+            <a href="/portfolio" className={pathname === '/portfolio' ? 'active' : ''}>Portfolio</a>
+            <a href="/services" className={pathname === '/services' ? 'active' : ''}>Services</a>
+            <a href="/contact" className={pathname === '/contact' ? 'active' : ''}>Contact</a>
           </nav>
-      </header>
+        </header>
 
-      <main>
-        <div className="children-container">
-          {children}
-        </div>
-      </main>
-      <footer className="footer">
-          <div className="footer-icons">
-              <a href="https://github.com/Fangoling"><i className='bx bxl-github'></i></a>
-              <a href="https://discordapp.com/users/327905667778347019"><i className='bx bxl-discord'></i></a>
-              <a href="https://www.linkedin.com/in/fangxingliu"><i className='bx bxl-linkedin-square'></i></a>
+        <main>
+          <div className="children-container">
+            {children}
           </div>
-      </footer>
+        </main>
 
+        <footer className="footer">
+          <div className="footer-icons">
+            <a href="https://github.com/Fangoling"><i className='bx bxl-github'></i></a>
+            <a href="https://discordapp.com/users/327905667778347019"><i className='bx bxl-discord'></i></a>
+            <a href="https://www.linkedin.com/in/fangxingliu"><i className='bx bxl-linkedin-square'></i></a>
+          </div>
+        </footer>
+
+      </body>
     </html>
   )
 }
