@@ -24,11 +24,10 @@ export default function RootLayout({
     <html lang="en" className={`${poppins.variable}`}>
 
       <head>
-        <meta name="title" content={`${metadata.title}`}/>
-        <meta name="description" content={`${metadata.description}`}/>
+        <meta name="description" content="As an aspiring programmer with proficiency in Android Jetpack, Java, and C, I am looking forward to gain experience and enhance my skills. Currently, I am pursuing my studies at the Technical University of Munich."/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
-        <title>Fangxing Liu&apos;s website</title>
+        <title>Fangxing Liu - App/Web Developer</title>
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
       </head>
       <body>
