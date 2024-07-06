@@ -9,14 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily:{
-        sans: ['var(--font-poppins)'],
-        mono: ['var(--font-poppins)']
+        sans: ['var(--font-montserrat)'],
+        mono: ['var(--font-montserrat)']
       },
       colors: {
         primary: '#1F2833',
         secondary: '#0FA4AF',
         font: '#ededed',
-        card: '#0B0C10'
+        card: '#0B0C10',
       },
       backgroundImage: {
         

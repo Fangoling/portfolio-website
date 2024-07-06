@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
 import './global.css'
-import { Poppins } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import Navbar from './components/navbar'
 import {Providers} from "./providers"
 
-const poppins = Poppins({
+
+const montserrat = Montserrat({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
-  variable: '--font-poppins'
+  variable: '--font-montserrat'
 })
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
 
   return (
-    <html lang="en" className={`${poppins.variable}`}>
+    <html lang="en" className={`${montserrat.variable}`}>
 
       <head>
         <meta name="description" content="As an aspiring programmer with proficiency in Android Jetpack, Java, and C, I am looking forward to gain experience and enhance my skills. Currently, I am pursuing my studies at the Technical University of Munich."/>
