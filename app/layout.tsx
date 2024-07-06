@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './global.css'
 import { Poppins } from 'next/font/google'
 import Navbar from './components/navbar'
+import {Providers} from "./providers"
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
@@ -14,11 +15,7 @@ export const metadata: Metadata = {
   description: "A website with Information about my portfolio and how to contact me",
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({children}: {children: React.ReactNode}) {
 
   return (
     <html lang="en" className={`${poppins.variable}`}>
@@ -31,6 +28,8 @@ export default function RootLayout({
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
       </head>
       <body>
+        <Providers>
+
         <header className="header">
           <a href="/" className="logo">Fangxing.</a>
           <Navbar/>
@@ -50,6 +49,7 @@ export default function RootLayout({
           </div>
         </footer>
 
+        </Providers>
       </body>
     </html>
   )
