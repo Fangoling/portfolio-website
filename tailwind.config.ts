@@ -13,10 +13,10 @@ const config: Config = {
         mono: ['var(--font-poppins)']
       },
       colors: {
-        primary: '#1d1b26',
-        secondary: '#e34234',
+        primary: '#1F2833',
+        secondary: '#0FA4AF',
         font: '#ededed',
-        customred: '#e34234'
+        card: '#0B0C10'
       },
       backgroundImage: {
         

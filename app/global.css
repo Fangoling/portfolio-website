@@ -2,43 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-:root {
-  --primary: #1d1b26;
-  --secondary: #e34234;
-  --font: #ededed;
-}
-* {
-  @apply box-border m-0 p-0;
-}
-
 html {
   height: 100%;
 }
 
 body {
-    background-color: var(--primary);
-    color: var(--font);
+    background-color: theme('colors.primary');
+    color: theme('colors.font');
     min-height: 100%;
     display: flex;
     flex-direction: column;
 }
+
 .header {
   @apply w-full flex justify-between items-center z-[100] px-[10%] py-5 left-0 top-0 ;
 }
 .logo {
-  @apply text-[25px] text-[color:var(--font)] no-underline font-semibold;
+  @apply text-[25px] text-font no-underline font-semibold;
 }
 .navbar {
   display: flex;
   flex-wrap: wrap
 }
 .navbar a {
-  @apply text-lg text-[color:var(--font)] no-underline font-medium ml-[35px];
+  @apply text-lg text-font no-underline font-medium ml-[35px];
 }
 .navbar a:hover,
 .navbar a.active {
-  @apply text-[color:var(--secondary)];
+  @apply text-secondary;
 }
 .footer {
   @apply relative w-full bottom-0 items-center z-[100] px-[10%] py-0 mt-auto;
@@ -47,13 +38,13 @@ body {
   @apply max-w-[600px];
 }
 .home-content h1 {
-  @apply text-[56px] font-bold leading-[1.2] text-[color:var(--font)];
+  @apply text-[56px] font-bold leading-[1.2] text-font;
 }
 .home-content h3 {
-  @apply text-[32px] font-bold text-[color:var(--secondary)];
+  @apply text-[32px] font-bold text-secondary;
 }
 .home-content p {
-  @apply text-base mt-5 mb-10 mx-0 text-[color:var(--font)];
+  @apply text-base mt-5 mb-10 mx-0 text-font;
 }
 .home-content .btn-box {
   @apply flex justify-between w-[345px] h-[50px];
@@ -66,11 +57,11 @@ body {
     align-items: center;
     width: 150px;
     height: 100%;
-    background: var(--secondary);
-    border: 2px solid var(--secondary);
+    background: theme('colors.primary');
+    border: 2px solid theme('colors.primary');
     border-radius: 8px;
     font-size: 19px;
-    color: var(--primary);
+    color: theme('colors.primary');
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
@@ -86,12 +77,12 @@ body {
     left: 0;
     width: 0%;
     height: 100%;
-    background: var(--primary);
+    background: theme('colors.primary');
     z-index: -1;
     transition: 0.5s;
 }
 .btn-box a:hover {
-    color: var(--secondary);
+    color: theme('colors.secondary');
 }
 
 .btn-box a:hover::before {
@@ -108,10 +99,10 @@ body {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid var(--secondary);
+    border: 2px solid theme('colors.secondary');
     border-radius: 50%;
     font-size: 20px;
-    color: var(--secondary);
+    color: theme('colors.secondary');
     text-decoration: none;
     z-index: 1;
     overflow: hidden;
@@ -125,12 +116,12 @@ body {
     left: 0;
     width: 0%;
     height: 100%;
-    background: var(--secondary);
+    background: theme('colors.secondary');
     z-index: -1;
     transition: .5s;
 }
 .footer-icons a:hover {
-    color: var(--primary);
+    color: theme('colors.primary');
 }
 
 .footer-icons a:hover::before {
