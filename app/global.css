@@ -146,5 +146,5 @@ body {
 }
 
 .children-container {
-  @apply pt-[10vh] pb-[15vh] px-[10%] z-[-1];
+  @apply pt-[12%] pb-[15vh] px-[10%] z-[-1];
 }

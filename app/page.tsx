@@ -1,8 +1,9 @@
 import './global.css'
+import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main>
+    <main className='flex justify-center'> 
       <div className="home-content">
         <h1>Hi, I&apos;m Fangxing Liu</h1>
         <h3>Computer Science Student</h3>
@@ -12,6 +13,12 @@ export default function Home() {
             <a href="https://www.linkedin.com/in/fangxingliu">Hire Me</a>
         </div>
       </div> 
+    <Image 
+        src="/cat-images/cat-coding.gif"
+        alt="cat coding gif"
+        width={450}
+        height={450}
+      />
     </main>
   )
 }
