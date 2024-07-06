@@ -1,13 +1,22 @@
 import React from 'react'
-import Image from 'next/image'
+import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nextui-org/react";
 
 export default function About() {
   return (
-      <Image
-        src="/cat-images/I-ARE-PROGRAMMER.jpg"
-        alt="Cat programming"
-        width={450}
-        height={450}
-      />
+    <Card className="max-w-[100px] bg-card text-font">
+      <CardHeader className="flex gap-3">
+        <div className="flex flex-col">
+          <p className="text-md">Fangxing Liu</p>
+          <p className="text-small text-default-500">fangxingliu.com</p>
+        </div>
+      </CardHeader>
+      <Divider/>
+      <CardBody>
+        <p>
+          Under construction.
+        </p>
+      </CardBody>
+      <Divider/>
+    </Card>
   )
 }
