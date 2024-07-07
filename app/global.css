@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    background-color: theme('colors.primary');
+    background-color: theme('colors.card');
     color: theme('colors.font');
     min-height: 100%;
     display: flex;
