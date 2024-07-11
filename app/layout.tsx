@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './global.css'
 import { Montserrat } from 'next/font/google'
-import Navbar from './components/navbar'
+import NavbarComponent from './components/navbar'
 import {Providers} from "./providers"
 
 
@@ -30,12 +30,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       </head>
       <body>
         <Providers>
-
-        <header className="header">
-          <a href="/" className="logo">Fangxing.</a>
-          <Navbar/>
-        </header>
-
+        <NavbarComponent/>
         <main>
           <div className="children-container">
             {children}
