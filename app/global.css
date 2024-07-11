@@ -32,7 +32,7 @@ body {
   @apply text-secondary;
 }
 .footer {
-  @apply flex justify-center relative w-full bottom-0 items-center z-[100] py-0 mt-auto;
+  @apply flex justify-center relative w-full bottom-0 items-center py-0 mt-auto;
 }
 .home-content {
   @apply max-w-[600px];
