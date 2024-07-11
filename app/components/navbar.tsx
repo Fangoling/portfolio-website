@@ -28,7 +28,6 @@ export default function NavbarComponent() {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="block hidden:xl"
         />
         <NavbarBrand className="h-full">
           <p className="text-xl text-font no-underline font-semibold">
@@ -37,7 +36,7 @@ export default function NavbarComponent() {
         </NavbarBrand>
       </NavbarContent>
 
-        <NavbarContent className="hidden xl:block gap-4 flex-wrap" justify="center">
+        <NavbarContent className="gap-4 flex-wrap" justify="center">
           <NavbarItem isActive={pathname === "/"}>
             <Link
               aria-current="page"
@@ -76,7 +75,7 @@ export default function NavbarComponent() {
             </Link>
           </NavbarItem>
         </NavbarContent>
-      <NavbarMenu className="bg-primary">
+      <NavbarMenu className="bg-primary items-center">
         {Object.entries(menuItems).map(([label, path]) => (
           <NavbarMenuItem key={label}>
             <Link className="w-full text-font" href={path} size="lg">
