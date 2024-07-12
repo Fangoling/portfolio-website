@@ -1,9 +1,16 @@
-import React from 'react'
-import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nextui-org/react";
+import React from "react";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  Divider,
+  Link,
+  Image,
+} from "@nextui-org/react";
 
 export default function About() {
   return (
-    <div className='flex justify-center'>
+    <div className="flex justify-center">
       <Card className="bg-primary text-font">
         <CardHeader className="flex gap-3">
           <div className="flex flex-col">
@@ -11,16 +18,24 @@ export default function About() {
             <p className="text-small text-default-500">fangxingliu.com</p>
           </div>
         </CardHeader>
-        <Divider/>
+        <Divider />
         <CardBody>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, harum quos! Et porro aliquid quae error sapiente omnis voluptates debitis blanditiis, quasi alias recusandae, maiores dolor ut dolores molestiae vero?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, harum quos! Et porro aliquid quae error sapiente omnis voluptates debitis blanditiis, quasi alias recusandae, maiores dolor ut dolores molestiae vero?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, harum quos! Et porro aliquid quae error sapiente omnis voluptates debitis blanditiis, quasi alias recusandae, maiores dolor ut dolores molestiae vero?
+            Hi, I'm a commputer science student who loves to develop and make
+            things. 
+            <br/>By contributing to to <Link className="text-secondary" href="https://github.com/SoilPlanter/Android">Soil Planter</Link> and taking part at 
+            the <Link className="text-secondary" href="https://www.linkedin.com/posts/itestra_codingcamp-softwareengineering-teamwork-ugcPost-7175864298076872704-c6Dl?utm_source=share&utm_medium=member_desktop">Itestra Coding Camp</Link>
+            I learned a lot about project management and developing in a team.
+            <br />I also really enjoy taking part at hackathons in order to meet interesting
+            people and create cool and impactful projects with them.
+            <br /><br />I love watching and talking about movies in my freetime. Here is the 
+            <Link href="https://letterboxd.com/Fangoling/"
+            className="text-secondary"
+             > Link to my Letterboxd</Link> if you are interested 
           </p>
         </CardBody>
-        <Divider/>
+        <Divider />
       </Card>
     </div>
-  )
+  );
 }
