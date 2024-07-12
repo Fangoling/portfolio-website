@@ -20,17 +20,19 @@ body {
 .logo {
   @apply text-[25px] text-font no-underline font-semibold;
 }
-.navbar {
-  display: flex;
-  flex-wrap: wrap
+
+@media (min-width: 600px) {
+  .smallscreen {
+    display: None;
+  }
 }
-.navbar a {
-  @apply text-lg text-font no-underline font-medium ml-[35px];
+
+@media (max-width: 600px) {
+  .bigscreen {
+    display: None;
+  }
 }
-.navbar a:hover,
-.navbar a.active {
-  @apply text-secondary;
-}
+
 .footer {
   @apply flex justify-center relative w-full bottom-0 items-center py-0 mt-auto;
 }

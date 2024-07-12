@@ -24,10 +24,30 @@ export default function NavbarComponent() {
   };
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-card">
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      classNames={{
+        base: "bg-card",
+        item: [
+          "flex",
+          "relative",
+          "h-full",
+          "items-center",
+          "data-[active=true]:after:content-['']",
+          "data-[active=true]:after:absolute",
+          "data-[active=true]:after:bottom-0",
+          "data-[active=true]:after:left-0",
+          "data-[active=true]:after:right-0",
+          "data-[active=true]:after:h-[2px]",
+          "data-[active=true]:after:rounded-[2px]",
+          "data-[active=true]:after:bg-primary",
+        ],
+      }}
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="smallscreen"
         />
         <NavbarBrand className="h-full">
           <p className="text-xl text-font no-underline font-semibold">
@@ -36,49 +56,37 @@ export default function NavbarComponent() {
         </NavbarBrand>
       </NavbarContent>
 
-        <NavbarContent className="gap-4 flex-wrap" justify="center">
-          <NavbarItem isActive={pathname === "/"}>
+      <NavbarContent className="bigscreen gap-4 flex-wrap" justify="center">
+        {Object.entries(menuItems).map(([label, path]) => (
+          <NavbarItem key={label} isActive={pathname === path}>
             <Link
               aria-current="page"
               color="foreground"
-              href="/"
-              className="text-xl text-font"
+              href={path}
+              className={`text-xl text-font"
+                  ${
+                    pathname === path
+                      ? "after-content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:rounded-[2px] after:bg-secondary"
+                      : ""
+                  }`}
             >
-              Home
+              {label}
             </Link>
           </NavbarItem>
-          <NavbarItem isActive={pathname === "/about"}>
-            <Link
-              color="foreground"
-              href="/about"
-              className="text-xl text-font"
-            >
-              About
-            </Link>
-          </NavbarItem>
-          <NavbarItem isActive={pathname === "/portfolio"}>
-            <Link
-              color="foreground"
-              href="/portfolio"
-              className="text-xl text-font"
-            >
-              Portfolio
-            </Link>
-          </NavbarItem>
-          <NavbarItem isActive={pathname === "/contact"}>
-            <Link
-              color="foreground"
-              href="/contact"
-              className="text-xl text-font"
-            >
-              Contact
-            </Link>
-          </NavbarItem>
-        </NavbarContent>
+        ))}
+      </NavbarContent>
       <NavbarMenu className="bg-primary items-center">
         {Object.entries(menuItems).map(([label, path]) => (
           <NavbarMenuItem key={label}>
-            <Link className="w-full text-font" href={path} size="lg">
+            <Link
+              href={path}
+              size="lg"
+              className={`text-xl text-font"
+                ${pathname === path
+                  ? "after-content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:rounded-[2px] after:bg-secondary"
+                  : ""
+                }`}
+            >
               {label}
             </Link>
           </NavbarMenuItem>
