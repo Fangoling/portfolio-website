@@ -29,7 +29,6 @@ export default function Portfolio() {
         </Link>
       </CardFooter>
     </Card>
-    <Spacer x={4} y={4}/>
     <Card className="max-w-xs bg-primary text-font">
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
@@ -54,7 +53,6 @@ export default function Portfolio() {
         </Link>
       </CardFooter>
     </Card>
-    <Spacer x={4} y={4}/>
     <Card className="max-w-xs bg-primary text-font">
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
