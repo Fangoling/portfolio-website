@@ -7,7 +7,7 @@ export default function Portfolio() {
     <Card className="max-w-xs bg-primary text-font">
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
-          <p className="text-md">My portfolio website</p>
+          <p className="text-large">My portfolio website</p>
           <p className="text-small text-default-500">fangxingliu.com</p>
         </div>
       </CardHeader>
@@ -34,7 +34,7 @@ export default function Portfolio() {
     <Card className="max-w-xs bg-primary text-font">
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
-          <p className="text-md">Soil Planter</p>
+          <p className="text-large">Soil Planter</p>
         </div>
       </CardHeader>
       <Divider/>
@@ -60,7 +60,7 @@ export default function Portfolio() {
     <Card className="max-w-xs bg-primary text-font">
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
-          <p className="text-md">BrainRot GPT</p>
+          <p className="text-large">BrainRot GPT</p>
         </div>
       </CardHeader>
       <Divider/>
@@ -86,7 +86,7 @@ export default function Portfolio() {
     <Card className="max-w-xs bg-primary text-font">
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
-          <p className="text-md">HACKATUM 2023 - Hello Fresh</p>
+          <p className="text-large">HACKATUM 2023 - Hello Fresh</p>
         </div>
       </CardHeader>
       <Divider/>
