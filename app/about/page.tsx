@@ -21,15 +21,15 @@ export default function About() {
         <Divider />
         <CardBody>
           <p>
-            Hi, I&apos;m a commputer science student who loves to develop and make
+            Hi, I&apos;m a computer science student who loves to develop and make
             things. 
             <br/>By contributing to to <Link className="text-secondary" href="https://github.com/SoilPlanter/Android">Soil Planter</Link> and taking part at 
             the <Link className="text-secondary" href="https://www.linkedin.com/posts/itestra_codingcamp-softwareengineering-teamwork-ugcPost-7175864298076872704-c6Dl?utm_source=share&utm_medium=member_desktop">Itestra Coding Camp </Link>
             I learned a lot about project management and developing in a team.
             <br />I also really enjoy taking part at hackathons in order to meet interesting
             people and create cool and impactful projects with them.
-            <br /><br />In my freetime I love to watch and talk about movies. Here is the <Link href="https://letterboxd.com/Fangoling/"className="text-secondary">
-            Link to my Letterboxd</Link> if you are interested 
+            <br /><br />In my freetime I love to watch and talk about movies. Here is the link to my <Link href="https://letterboxd.com/Fangoling/"className="text-secondary">
+            Letterboxd</Link> if you are interested 
           </p>
         </CardBody>
         <Divider />
