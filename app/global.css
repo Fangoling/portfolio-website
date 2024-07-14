@@ -42,7 +42,7 @@ body {
 .home-content h1 {
   @apply text-[56px] font-bold leading-[1.2] text-font;
 }
-.home-content h3 {
+.home-content h2 {
   @apply text-[32px] font-bold text-secondary;
 }
 .home-content p {
