@@ -12,8 +12,8 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "Fangxing Liu | CS Student & App/Web Developer",
-  description: "A website with Information about my portfolio and how to contact me",
+  title: "Fangxing Liu | CS Student & Web/App Developer",
+  description: "A website with Information about me, my portfolio and ways to contact me",
 }
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
@@ -22,10 +22,10 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     <html lang="en" className={`${montserrat.variable}`}>
 
       <head>
-        <meta name="description" content="As an aspiring programmer with proficiency in Android Jetpack, Java, and C, I am looking forward to gain experience and enhance my skills. Currently, I am pursuing my studies at the Technical University of Munich."/>
+        <meta name="description" content={String(metadata.description)}/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
-        <title>Fangxing Liu - App/Web Developer</title>
+        <title>{String(metadata.title)}</title>
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
       </head>
       <body>
@@ -37,7 +37,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           </div>
         </main>
 
-        <footer className="footer">
+        <footer className="flex justify-center relative w-full bottom-0 items-center py-0 mt-auto">
           <div className="footer-icons">
             <a href="https://github.com/Fangoling"><i className='bx bxl-github'></i></a>
             <a href="https://discordapp.com/users/327905667778347019"><i className='bx bxl-discord'></i></a>
