@@ -14,13 +14,6 @@ body {
     flex-direction: column;
 }
 
-.header {
-  @apply w-full flex justify-between items-center z-[100] px-[10%] py-5 left-0 top-0 ;
-}
-.logo {
-  @apply text-[25px] text-font no-underline font-semibold;
-}
-
 @media (min-width: 600px) {
   .smallscreen {
     display: None;
@@ -33,63 +26,26 @@ body {
   }
 }
 
-.footer {
-  @apply flex justify-center relative w-full bottom-0 items-center py-0 mt-auto;
-}
 .home-content {
   @apply max-w-[600px];
 }
+
 .home-content h1 {
   @apply text-[56px] font-bold leading-[1.2] text-font;
 }
+
 .home-content h2 {
   @apply text-[32px] font-bold text-secondary;
 }
+
 .home-content p {
   @apply text-base mt-5 mb-10 mx-0 text-font;
 }
+
 .home-content .btn-box {
   @apply flex justify-between w-[345px] h-[50px];
 }
 
-.btn-box a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 100%;
-    background: theme('colors.primary');
-    border: 2px solid theme('colors.primary');
-    border-radius: 8px;
-    font-size: 19px;
-    color: theme('colors.primary');
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
-
-.btn-box a:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background: theme('colors.primary');
-    z-index: -1;
-    transition: 0.5s;
-}
-.btn-box a:hover {
-    color: theme('colors.secondary');
-}
-
-.btn-box a:hover::before {
-    width: 100%;
-}
 .footer-icons {
   @apply absolute w-[170px] flex justify-between bottom-10;
 }
@@ -129,13 +85,6 @@ body {
 .footer-icons a:hover::before {
     width: 100%;
     height: 100%;
-}
-
-.image {
-  @apply h-screen flex items-center px-[10%] py-0;
-}
-.image-content {
-  @apply px-[10%] py-0;
 }
 
 .children-container {
